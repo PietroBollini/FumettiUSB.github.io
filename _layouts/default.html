@@ -34,13 +34,9 @@
 
             <header>
 
-                <a class="logo" href="https://www.metreeca.com/"></a>
+                <a class="logo" href="/"></a>
 
-                <span>
-                    <a href="{{ '/' | relative_url }}">{{ project | capitalize }}</a>
-                    /
-                    <a href="{{ release }}" target="_blank">v{{ version }}</a>
-                </span>
+                <a href="/">Sito di Pito</a>
 
                 <label for="toggle" class="icon"></label> <!-- icon dynamically managed by default.css -->
 
@@ -48,7 +44,13 @@
 
             <section>
 
-                <a class="title" href="#_top">{{ title }}</a>
+                <ul>
+                    {% for post in site.posts %}
+                    <li>
+                        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
 
             </section>
 
