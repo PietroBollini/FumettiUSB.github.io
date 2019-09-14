@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 
-{% assign github = site.github.repository_url | append: "/releases/tag/v" | append: version %}
-
 {% assign project = page.project | default: site.github.project_title %}
-{% assign version = page.version | default: site.github.latest_release.tag_name | remove: "v" %}
 {% assign tagline = page.tagline | default: site.github.project_tagline | strip %}
-{% assign release = page.release | default: github %}
 
 {% assign title = page.title | default: tagline %}
 

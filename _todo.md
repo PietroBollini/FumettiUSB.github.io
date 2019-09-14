@@ -1,1 +1,2 @@
-- logo nel footer
+- nome del sito
+- copyright/licenza nel footer

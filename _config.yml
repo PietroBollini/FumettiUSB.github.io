@@ -6,12 +6,3 @@ exclude: [Gemfile, Gemfile.lock]
 plugins:
   - jekyll-redirect-from
 
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      project: "sito"
-      version: "1.2.3"
-      tagline: "Sito di Pito"
-      release: "https://github.com/FrancescoBollini/site/releases/tag/v1.2.3"
