@@ -485,18 +485,6 @@ a:hover, button:active {
 	cursor: pointer;
 }
 
-a[target=_blank]:after {
-	content: '\f08e'; /* external link */
-	font-family: FontAwesome;
-	font-size: 66%;
-	margin-left: 0.5em;
-}
-
-a[target].icon:after,
-a[target][href*='metreeca']:after {
-	display: none;
-}
-
 a.more:after {
 	content: '›››';
 	display: inline-block;
