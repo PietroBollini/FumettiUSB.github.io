@@ -6,3 +6,17 @@ exclude: [Gemfile, Gemfile.lock]
 plugins:
   - jekyll-redirect-from
 
+prose:
+  rooturl: "_posts"
+  media: "assets"
+  metadata:
+    _posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "published"
+          value: "true"
