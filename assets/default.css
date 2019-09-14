@@ -590,7 +590,7 @@ select {
 		display: none;
 	}
 
-	body > nav > section {
+	body > nav > * {
 		display: block !important;
 	}
 

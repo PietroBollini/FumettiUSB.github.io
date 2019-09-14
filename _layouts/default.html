@@ -36,7 +36,7 @@
 
                 <a class="logo" href="/"></a>
 
-                <a href="/">Sito di Pito</a>
+                <a href="{{ '/' | absolute_url }}">Sito di Pito</a>
 
                 <label for="toggle" class="icon"></label> <!-- icon dynamically managed by default.css -->
 
@@ -47,12 +47,16 @@
                 <ul>
                     {% for post in site.posts %}
                     <li>
-                        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                        <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
                     </li>
                     {% endfor %}
                 </ul>
 
             </section>
+
+            <footer>
+                <a href="http://prose.io/#FrancescoBollini/site/tree/master/_posts">Edit</a>
+            </footer>
 
         </nav>
 
