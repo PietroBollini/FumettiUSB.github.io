@@ -15,3 +15,13 @@ defaults:
       version: "1.2.3"
       tagline: "Sito di Pito"
       release: "https://github.com/FrancescoBollini/site/releases/tag/v1.2.3"
+      
+prose:
+  rooturl: "_posts"
+  media: "assets"
+  metadata:
+    _posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
