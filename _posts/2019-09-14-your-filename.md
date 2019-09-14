@@ -1,5 +1,5 @@
 ---
 published: true
-title: ''
+title: Ciao
 ---
 ![test.png]({{site.baseurl}}/assets/test.png)
