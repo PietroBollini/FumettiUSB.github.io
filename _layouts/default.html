@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-{% assign project = page.project | default: site.github.project_title %}
+{% assign project = page.project | default: site.github.project_title | remove: ".github.io" %}
 {% assign tagline = page.tagline | default: site.github.project_tagline | strip %}
 
 {% assign title = page.title | default: tagline %}
@@ -9,7 +9,7 @@
 
     <head>
 
-        <title>{% if page.title %}{{ page.title }} | {% endif %}{{ project | capitalize }}</title>
+        <title>{% if page.title %}{{ page.title }} | {% endif %}{{ project }}</title>
 
         <meta name="description" content="{{ page.excerpt | strip_html }}">
         <meta name="copyright" content="{{ copyright }}"/>
@@ -17,7 +17,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-        <link rel="shortcut icon" href="{{ '/resources/icons/logo.ico' | relative_url }}"/>
+        <link rel="shortcut icon" href="{{ '/resources/icons/icon.ico' | relative_url }}"/>
         <link rel="stylesheet" type="text/css" href="{{ '/resources/default.css' | relative_url }}"/>
 
     </head>
@@ -26,50 +26,26 @@
 
         <input id="toggle" type="checkbox"> <!-- hidden menu toggle for mobile view -->
 
-        <nav>
-
-            <header>
-
-                <a class="logo" href="/"></a>
-
-                <a href="{{ '/' | absolute_url }}">Sito di Pito</a>
-
-                <label for="toggle" class="icon"></label> <!-- icon dynamically managed by default.css -->
-
-            </header>
-
-            <section>
-
-                <ul>
-                    {% for post in site.posts %}
-                    <li>
-                        <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-
-            </section>
-
-            <footer>
-                <a class="fa fa-edit" title="Edit on GitHub"
-                       target="_blank" href="http://prose.io/#FrancescoBollini/site/tree/master/_posts"></a>
-            </footer>
-
-        </nav>
+        <header>
+            <a href="/">Fumetti USB</a>
+        </header>
 
         <main>
 
-            <header id="_top">
-                <span>{{ title }}</span>
-            </header>
+            <h1>{{ title }}</h1>
 
-            <section>{{ content }}</section>
-
-            <footer>© {{ 'now' | date: '%Y' }} ???. This work is licensed under the
-                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>
-            </footer>
+            {{ content }}
 
         </main>
+
+        <footer>
+            <a title="Edit on GitHub" target="_blank" style="color: inherit;"
+                    href="http://prose.io/#{{ site.github.repository_nwo }}/tree/master/_posts">©</a> {{ 'now' | date:
+            '%Y' }} Fumetti USB. Quest'opera è distribuita con Licenza
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it">Creative Commons
+                <span style="white-space: nowrap;">CC BY-NC-SA 4.0</span> </a>
+
+        </footer>
 
         <script type="text/javascript" src="{{ '/resources/default.js' | relative_url }}"></script>
 
