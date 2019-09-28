@@ -3,8 +3,6 @@
 {% assign project = page.project | default: site.github.project_title | remove: ".github.io" %}
 {% assign tagline = page.tagline | default: site.github.project_tagline | strip %}
 
-{% assign title = page.title | default: tagline %}
-
 <html>
 
     <head>
@@ -12,7 +10,6 @@
         <title>{% if page.title %}{{ page.title }} | {% endif %}{{ project }}</title>
 
         <meta name="description" content="{{ page.excerpt | strip_html }}">
-        <meta name="copyright" content="{{ copyright }}"/>
 
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -32,19 +29,25 @@
 
         <main>
 
-            <h1>{{ title }}</h1>
+            {% if page.url == "/" %}
+
+            {% for post in site.posts %}
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            {% endfor %}
+
+            {% else %}
 
             {{ content }}
+
+            {% endif %}
 
         </main>
 
         <footer>
             <a title="Edit on GitHub" target="_blank" style="color: inherit;"
                     href="http://prose.io/#{{ site.github.repository_nwo }}/tree/master/_posts">©</a> {{ 'now' | date:
-            '%Y' }} Fumetti USB. Quest'opera è distribuita con Licenza
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it">Creative Commons
-                <span style="white-space: nowrap;">CC BY-NC-SA 4.0</span> </a>
-
+            '%Y' }} Fumetti USB. Quest'opera è distribuita con Licenza <a target="_blank"
+                href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it">Creative Commons BY-NC-SA&nbsp;4.0</a>
         </footer>
 
         <script type="text/javascript" src="{{ '/resources/default.js' | relative_url }}"></script>
