@@ -30,9 +30,17 @@
             <a href="/"><img alt="Fumetti USB" src="{{ '/resources/icons/header.jpg' | relative_url }}"></a>
         </header>
 
-        <main>
+        <main class="{% if page.url == '/' %}index{% else %}post{% endif %}">
 
             {% if page.url == "/" %}
+
+            <section>
+
+                <span>{{ page.title }}</span>
+
+                {{ content }}
+
+            </section>
 
             {% for post in site.posts %}
 

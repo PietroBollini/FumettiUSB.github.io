@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway|Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 *, *::before, *::after {
 	flex: 0 0 auto;
@@ -16,9 +16,6 @@ html {
 	font-family: 'Raleway', sans-serif;
 }
 
-h1, h2, h3, body > main > div:first-child  {
-	font-family: 'Rock Salt', cursive;
-}
 
 /**** Layout **********************************************************************************************************/
 
@@ -94,7 +91,24 @@ body > footer {
 	color: #999;
 }
 
-/**********************************************************************************************************************/
+/**** Index ***********************************************************************************************************/
+
+main.index > section {
+	margin-bottom: 2.5em;
+	vertical-align: top;
+}
+
+main.index > section > *:first-child {
+	display: block;
+	font-size: 110%;
+	margin-bottom: 1em;
+}
+
+main.index > section > img {
+	width: 100%;
+}
+
+/**** Post ************************************************************************************************************/
 
 p > img[alt=''] {
 	display: block;
@@ -296,12 +310,28 @@ select {
 	border-style: solid;
 }
 
-/**** Left-Aligned Body ***********************************************************************************************/
+/**** Large ***********************************************************************************************************/
 
 @media screen and (min-width: 480px), print {
 
 	body {
 		text-align: left;
+	}
+
+	body > main.index {
+
+	}
+
+	body > main.index > section {
+		display: inline-block;
+		width: 49%;
+		padding: 0.5em;
+	}
+
+	main.index > section > *:first-child {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	ul, ol {
@@ -319,6 +349,17 @@ select {
 
 	dd {
 		margin-left: 1em;
+	}
+
+}
+
+/**** Larger ******************************************************************************************************************/
+
+@media screen and (min-width: 640px), print {
+
+	body > main.index > section {
+		width: 32%;
+		padding: 0.75em;
 	}
 
 }
