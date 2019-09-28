@@ -1,3 +1,2 @@
 - last n posts
-- reduce header on scroll
 - cookie policy?

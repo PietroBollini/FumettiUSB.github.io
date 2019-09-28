@@ -62,6 +62,7 @@ body > header {
 }
 
 body > header > a > img {
+	display: block;
 	width: 100%;
 }
 
@@ -93,18 +94,18 @@ body > footer {
 
 /**** Index ***********************************************************************************************************/
 
-main.index > section {
+body.index > main > section {
 	margin-bottom: 2.5em;
 	vertical-align: top;
 }
 
-main.index > section > *:first-child {
+body.index > main> section > *:first-child {
 	display: block;
 	font-size: 110%;
 	margin-bottom: 1em;
 }
 
-main.index > section > img {
+body.index > main> section > img {
 	width: 100%;
 }
 
@@ -318,17 +319,21 @@ select {
 		text-align: left;
 	}
 
-	body > main.index {
-
+	body.post > header > a > img {
+		transition: width 750ms;
 	}
 
-	body > main.index > section {
+	body.post.scrolled > header > a > img {
+		width: 30%;
+	}
+
+	body.index > main > section {
 		display: inline-block;
 		width: 49%;
 		padding: 0.5em;
 	}
 
-	main.index > section > *:first-child {
+	body.index > main> section > *:first-child {
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -357,7 +362,7 @@ select {
 
 @media screen and (min-width: 640px), print {
 
-	body > main.index > section {
+	body.index > main > section {
 		width: 32%;
 		padding: 0.75em;
 	}
