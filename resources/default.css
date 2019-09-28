@@ -16,7 +16,7 @@ html {
 	font-family: 'Raleway', sans-serif;
 }
 
-h1, h2, h3 {
+h1, h2, h3, body > main > div:first-child  {
 	font-family: 'Rock Salt', cursive;
 }
 
@@ -64,6 +64,10 @@ body > header {
 	box-shadow: 0 0 0.5em 0.5em #FFF;
 }
 
+body > header > a > img {
+	width: 100%;
+}
+
 body > header > label::before {
 	content: '\f0c9'; /* fa-bars */
 }
@@ -76,6 +80,11 @@ body > main {
 	flex-grow: 1;
 	padding-top: 0;
 	padding-bottom: 1rem;
+}
+
+body > main > div:first-child {
+	margin-bottom: 1.5em;
+	font-size: 150%;
 }
 
 body > footer {

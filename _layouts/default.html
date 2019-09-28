@@ -14,8 +14,11 @@
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-        <link rel="shortcut icon" href="{{ '/resources/icons/icon.ico' | relative_url }}"/>
         <link rel="stylesheet" type="text/css" href="{{ '/resources/default.css' | relative_url }}"/>
+
+        <link rel="shortcut icon" href="{{ '/resources/icons/icon-16x16.ico' | relative_url }}"/>
+        <link rel="shortcut icon" href="{{ '/resources/icons/icon-32x32ico' | relative_url }}"/>
+
 
     </head>
 
@@ -24,7 +27,7 @@
         <input id="toggle" type="checkbox"> <!-- hidden menu toggle for mobile view -->
 
         <header>
-            <a href="/">Fumetti USB</a>
+            <a href="/"><img alt="Fumetti USB" src="{{ '/resources/icons/header.jpg' | relative_url }}"></a>
         </header>
 
         <main>
@@ -36,6 +39,8 @@
             {% endfor %}
 
             {% else %}
+
+            <div>{{ page.title }}</div>
 
             {{ content }}
 
