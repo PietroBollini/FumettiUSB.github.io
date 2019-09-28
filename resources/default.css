@@ -25,18 +25,18 @@ h1, h2, h3 {
 html {
 	height: 100%;
 	width: 100%;
-	font-size: 12pt;
-	color: #000;
-	background-color: #FFF;
 }
 
 body {
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
-	height: 100%;
 	width: 100%;
+	min-height: 100%;
 	text-align: center;
+	font-size: 12pt;
+	color: #000;
+	background-color: #FFF;
 }
 
 body > input {
@@ -44,17 +44,24 @@ body > input {
 }
 
 body > * {
-	max-width: 50em;
+	flex: 0 0 auto;
+	width: 100%;
+	max-width: 50rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
+	margin: 0 auto;
+	overflow: hidden;
 }
 
 body > header {
-	flex-shrink: 0;
+	position: sticky;
+	top: 0;
 	padding-top: 0.5rem;
 	padding-bottom: 0.25rem;
+	margin-bottom: 1em;
 	font-size: 1.5rem;
-	overflow: hidden;
+	background-color: inherit;
+	box-shadow: 0 0 0.5em 0.5em #FFF;
 }
 
 body > header > label::before {
@@ -67,52 +74,22 @@ body > input:checked ~ header > label::before {
 
 body > main {
 	flex-grow: 1;
-	flex-shrink: 1;
 	padding-top: 0;
 	padding-bottom: 1rem;
 }
 
 body > footer {
-	flex-shrink: 0;
 	padding-top: 0.75rem;
 	padding-bottom: 0.75rem;
 	font-size: 0.8rem;
 	color: #999;
 }
 
+/**********************************************************************************************************************/
 
-/**** Main ************************************************************************************************************/
-
-body > input:checked ~ main {
-	flex-basis: 0;
-}
-
-body > main {
-	flex-shrink: 1;
-	flex-grow: 1;
-	overflow-x: hidden;
-	overflow-y: auto;
-}
-
-body > main > * {
-	max-width: 50rem;
-}
-
-body > main > header {
-	margin-top: 0.5em;
-	margin-bottom: 1em;
-	font-weight: 300;
-	font-variant: small-caps;
-	color: #999;
-}
-
-body > main > footer > a {
-	font: inherit !important;
-	color: inherit !important;
-}
-
-body > main > footer > a:hover {
-	text-decoration: underline;
+p > img[alt=''] {
+	display: block;
+	width: 100%;
 }
 
 /**** Typography ******************************************************************************************************/
@@ -255,24 +232,6 @@ blockquote > small:last-child {
 	display: block;
 	margin-top: 0.5em;
 	text-align: right;
-}
-
-img:only-child {
-	width: 100%;
-	height: auto;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-	border-style: solid;
-	border-radius: 3px;
-	box-shadow: 3pt 3pt 9pt #999;
-}
-
-img:not(:only-child) {
-	float: right;
-	max-width: 40%;
-	height: auto;
-	margin-left: 1.5em;
-	margin-bottom: 1.5em;
 }
 
 hr {
