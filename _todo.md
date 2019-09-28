@@ -1,2 +1,2 @@
-- nome del sito
-- copyright/licenza nel footer
+- reduce header on scroll
+- cookie policy?

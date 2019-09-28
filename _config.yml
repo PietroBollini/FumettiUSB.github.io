@@ -1,5 +1,4 @@
-baseurl: /site # no custom domain
-repository: FrancescoBollini/site # local testing (https://help.github.com/articles/repository-metadata-on-github-pages/)
+repository: FumettiUSB/FumettiUSB.github.io # local testing (https://help.github.com/articles/repository-metadata-on-github-pages/)
 
 exclude: [Gemfile, Gemfile.lock]
 

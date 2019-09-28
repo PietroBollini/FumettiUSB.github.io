@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+*, *::before, *::after {
+	flex: 0 0 auto;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none 1px #CCC;
+	border: none 1px #CCC;
+	font: inherit;
+}
+
+/**** Fonts ***********************************************************************************************************/
+
+html {
+	font-family: 'Raleway', sans-serif;
+}
+
+
+/**** Layout **********************************************************************************************************/
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	width: 100%;
+	min-height: 100%;
+	text-align: center;
+	font-size: 12pt;
+	color: #000;
+	background-color: #FFF;
+}
+
+body > input {
+	display: none;
+}
+
+body > * {
+	flex: 0 0 auto;
+	width: 100%;
+	max-width: 50rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+body > header {
+	position: sticky;
+	top: 0;
+	padding-top: 0.5rem;
+	padding-bottom: 0.25rem;
+	margin-bottom: 1em;
+	font-size: 1.5rem;
+	background-color: inherit;
+	box-shadow: 0 0 0.5em 0.5em #FFF;
+}
+
+body > header > a > img {
+	width: 100%;
+}
+
+body > header > label::before {
+	content: '\f0c9'; /* fa-bars */
+}
+
+body > input:checked ~ header > label::before {
+	content: '\f00d'; /* fa-times */
+}
+
+body > main {
+	flex-grow: 1;
+	padding-top: 0;
+	padding-bottom: 1rem;
+}
+
+body > main > div:first-child {
+	margin-bottom: 1.5em;
+	font-size: 150%;
+}
+
+body > footer {
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+	font-size: 0.8rem;
+	color: #999;
+}
+
+/**** Index ***********************************************************************************************************/
+
+main.index > section {
+	margin-bottom: 2.5em;
+	vertical-align: top;
+}
+
+main.index > section > *:first-child {
+	display: block;
+	font-size: 110%;
+	margin-bottom: 1em;
+}
+
+main.index > section > img {
+	width: 100%;
+}
+
+/**** Post ************************************************************************************************************/
+
+p > img[alt=''] {
+	display: block;
+	width: 100%;
+}
+
+/**** Typography ******************************************************************************************************/
+
+h1,
+h2,
+h3 {
+	clear: both;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	font-weight: 300;
+	color: #333;
+}
+
+* + h1,
+* + h2,
+* + h3 {
+}
+
+h1 {
+	padding-bottom: 0.2em;
+	border-bottom-style: solid;
+	font-size: 175%;
+}
+
+h2 {
+	padding-bottom: 0.2em;
+	border-bottom-style: dotted;
+	font-size: 125%;
+}
+
+h3 {
+	font-weight: 700;
+	font-size: 100%;
+}
+
+dl, ul, ol {
+	margin-bottom: 1.5em;
+}
+
+ul, ol {
+	list-style-position: inside;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ul > li::before {
+	content: '›';
+	margin-right: 0.25em;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+li {
+	margin-bottom: 0.1em;
+}
+
+dt {
+	font-weight: 700;
+	font-size: 95%;
+	color: #333;
+}
+
+* + dt {
+	margin-top: 1em;
+}
+
+dt * {
+	font-weight: 700;
+}
+
+dd {
+	margin-top: 0.5em;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 1.5em;
+	font-size: 95%;
+}
+
+tr:nth-child(odd) > td {
+	background-color: #F8F8F8;
+}
+
+th,
+td {
+	padding: 0.5em 0.5em;
+	border-bottom-style: solid;
+	vertical-align: baseline;
+}
+
+th {
+	white-space: pre;
+	font-weight: 700;
+}
+
+pre {
+	position: relative;
+	overflow: auto;
+	padding: 0.5em 0.75em;
+	border-style: dotted;
+	border-radius: 0.25em;
+	white-space: pre-wrap;
+	text-align: left;
+	tab-size: 4;
+	font-size: 85%;
+	background-color: #F0F0F0;
+}
+
+pre {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+pre + pre,
+div + div > pre {
+	margin-top: -1em;
+}
+
+p {
+	margin-bottom: 0.75em;
+}
+
+blockquote {
+	margin-top: 1.5em;
+	padding-left: 2em;
+	padding-right: 0.5em;
+	margin-bottom: 1.5em;
+	border-left: solid 0.5em #EEE;
+	font-style: italic;
+}
+
+blockquote > small:last-child {
+	display: block;
+	margin-top: 0.5em;
+	text-align: right;
+}
+
+hr {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	border-top-style: solid;
+}
+
+a, a:visited {
+	text-decoration: none;
+	font-weight: 700;
+	color: #567;
+}
+
+a:hover, button:active {
+	color: #C30 !important;
+	border-color: #C30 !important;
+	cursor: pointer;
+}
+
+a.more:after {
+	content: '›››';
+	display: inline-block;
+	margin-left: 0.25em;
+}
+
+button {
+	background-color: transparent;
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	color: #333;
+	white-space: pre;
+	font-weight: 700;
+}
+
+abbr {
+	text-transform: none;
+	white-space: pre;
+}
+
+code {
+	white-space: pre;
+	letter-spacing: -0.01em;
+	font-size: 90%;
+}
+
+select {
+	border-style: solid;
+}
+
+/**** Large ***********************************************************************************************************/
+
+@media screen and (min-width: 480px), print {
+
+	body {
+		text-align: left;
+	}
+
+	body > main.index {
+
+	}
+
+	body > main.index > section {
+		display: inline-block;
+		width: 49%;
+		padding: 0.5em;
+	}
+
+	main.index > section > *:first-child {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	ul, ol {
+		list-style-position: outside;
+		padding-left: 1.25em;
+	}
+
+	ul {
+		list-style-type: square;
+	}
+
+	ul > li::before {
+		display: none;
+	}
+
+	dd {
+		margin-left: 1em;
+	}
+
+}
+
+/**** Larger ******************************************************************************************************************/
+
+@media screen and (min-width: 640px), print {
+
+	body > main.index > section {
+		width: 32%;
+		padding: 0.75em;
+	}
+
+}
+
+
+/**** Printed *********************************************************************************************************/
+
+@media print {
+
+}
