@@ -1,2 +1,2 @@
-- favicon
+- reduce header on scroll
 - cookie policy?

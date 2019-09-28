@@ -35,7 +35,20 @@
             {% if page.url == "/" %}
 
             {% for post in site.posts %}
-            <a href="{{ post.url }}">{{ post.title }}</a>
+
+            <section>
+
+                <a href="{{ post.url }}">{{ post.title }}</a>
+
+                {% comment %} https://community.shopify.com/c/Shopify-Design/Pull-an-image-from-a-page-using-liquid/td-p/231491 {% endcomment %}
+
+                {% assign images = post.content | split: '<img'  %}
+
+                <img src="{{ images[1] | split: 'src="' | last | split: '"' | first }}"></img>
+
+            </section>
+
+
             {% endfor %}
 
             {% else %}
