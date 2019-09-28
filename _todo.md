@@ -1,2 +1,2 @@
-- last n posts
+- testo intro
 - cookie policy?

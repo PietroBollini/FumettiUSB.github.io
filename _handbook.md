@@ -1,0 +1,3 @@
+- non lasciare margine negli scan che fai, le pagine non devono avere margine
+- devono essere esportate un  pagina per una, in formato 'jpg' a bassa qualità (massimo 500k)
+- in caso di malfunzionamenti sel sistema cheiedere al personale specializzato… (fra o Papa)
