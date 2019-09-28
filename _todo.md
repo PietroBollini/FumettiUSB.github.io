@@ -1,2 +1,2 @@
-- reduce header on scroll
+- testo intro
 - cookie policy?

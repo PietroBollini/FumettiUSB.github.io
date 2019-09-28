@@ -22,7 +22,7 @@
 
     </head>
 
-    <body>
+    <body class="{% if page.url == '/' %}index{% else %}post{% endif %}">
 
         <input id="toggle" type="checkbox"> <!-- hidden menu toggle for mobile view -->
 
@@ -30,7 +30,7 @@
             <a href="/"><img alt="Fumetti USB" src="{{ '/resources/icons/header.jpg' | relative_url }}"></a>
         </header>
 
-        <main class="{% if page.url == '/' %}index{% else %}post{% endif %}">
+        <main>
 
             {% if page.url == "/" %}
 
@@ -42,7 +42,7 @@
 
             </section>
 
-            {% for post in site.posts %}
+            {% for post in site.posts limit: 15 %}
 
             <section>
 
