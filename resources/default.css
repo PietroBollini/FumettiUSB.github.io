@@ -88,8 +88,8 @@ body > main > div:first-child {
 body > footer {
 	padding-top: 0.75rem;
 	padding-bottom: 0.75rem;
-	font-size: 0.8rem;
-	color: #999;
+	font-size: 0.9rem;
+	color: #666;
 }
 
 /**** Index ***********************************************************************************************************/
@@ -105,7 +105,7 @@ body.index > main> section > *:first-child {
 	margin-bottom: 1em;
 }
 
-body.index > main> section > img {
+body.index > main> section > a > img {
 	width: 100%;
 }
 
