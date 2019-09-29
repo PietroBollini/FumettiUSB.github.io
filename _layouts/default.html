@@ -14,10 +14,10 @@
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-        <link rel="stylesheet" type="text/css" href="{{ '/resources/default.css' | relative_url }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ '/resources/default.css' }}"/>
 
-        <link rel="shortcut icon" href="{{ '/resources/icons/icon-16x16.ico' | relative_url }}"/>
-        <link rel="shortcut icon" href="{{ '/resources/icons/icon-32x32ico' | relative_url }}"/>
+        <link rel="shortcut icon" href="{{ '/resources/icons/icon-16x16.ico' }}"/>
+        <link rel="shortcut icon" href="{{ '/resources/icons/icon-32x32ico' }}"/>
 
 
     </head>
@@ -27,7 +27,7 @@
         <input id="toggle" type="checkbox"> <!-- hidden menu toggle for mobile view -->
 
         <header>
-            <a href="/"><img alt="Fumetti USB" src="{{ '/resources/icons/header.jpg' | relative_url }}"></a>
+            <a href="/"><img alt="Fumetti USB" src="{{ '/resources/icons/header.jpg' }}"></a>
         </header>
 
         <main>
@@ -48,14 +48,12 @@
 
                 <a href="{{ post.url }}">{{ post.title }}</a>
 
-                {% comment %} https://community.shopify.com/c/Shopify-Design/Pull-an-image-from-a-page-using-liquid/td-p/231491 {% endcomment %}
-
                 {% assign images = post.content | split: '<img'  %}
+                {% assign preview = images[1] | split: 'src="' | last | split: '"' | first   %}
 
-                <img src="{{ images[1] | split: 'src="' | last | split: '"' | first }}"></img>
+                <a href="{{ post.url }}"><img src="{{ preview }}"></img></a>
 
             </section>
-
 
             {% endfor %}
 
@@ -71,10 +69,11 @@
             <a title="Edit on GitHub" target="_blank" style="color: inherit;"
                     href="http://prose.io/#{{ site.github.repository_nwo }}/tree/master/_posts">©</a> {{ 'now' | date:
             '%Y' }} Fumetti USB. Quest'opera è distribuita con Licenza <a target="_blank"
-                href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it">Creative Commons BY-NC-SA&nbsp;4.0</a>
+                href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it">Creative Commons
+            <span style="white-space: nowrap;">BY-NC-SA 4.0</span></a>
         </footer>
 
-        <script type="text/javascript" src="{{ '/resources/default.js' | relative_url }}"></script>
+        <script type="text/javascript" src="{{ '/resources/default.js' }}"></script>
 
     </body>
 
