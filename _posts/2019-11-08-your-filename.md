@@ -1,7 +1,7 @@
 ---
 published: true
-title: ''
+title: Untitled
 ---
-## A New Post
+## Tecnologia
 
 ![]({{site.baseurl}}/assets/tecnologia%203.jpg)![tecnologia 3.jpg]({{site.baseurl}}/assets/tecnologia 3.jpg)
