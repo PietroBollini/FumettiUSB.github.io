@@ -1,6 +1,6 @@
 ---
 published: true
-title: i meschini dispositivi
+title: I meschini dispositivi
 ---
 ## i meschini dispositivi
 
