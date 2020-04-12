@@ -142,7 +142,6 @@ body > main > footer {
 	color: #666;
 }
 
-
 body > canvas {
 	 position: fixed;
 	left: 0;
@@ -151,8 +150,12 @@ body > canvas {
 	bottom: 0;
 	padding: 0;
 	max-width: initial;
-	opacity: 0.9;
+	opacity: 0.75;
 	pointer-events: none;
+}
+
+body > script {
+	display: none;
 }
 
 /**** Index ***********************************************************************************************************/

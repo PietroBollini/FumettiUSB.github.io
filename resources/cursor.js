@@ -49,7 +49,7 @@ Particle.prototype = {
 
 const originalColors = [ '#69D2E7', '#A7DBD8', '#E0E4CC', '#F38630', '#FA6900', '#FF4E50', '#F9D423' ];
 
-let MAX_PARTICLES = 280;
+let MAX_PARTICLES = 50;
 let COLOURS = [ '#69D2E7',
 	'#A7DBD8',
 	'#c0ff70',
