@@ -12,7 +12,7 @@ Particle.prototype = {
 		this.wander = 0.15;
 		this.theta = random( TWO_PI );
 		this.drag = 0.92;
-		this.color = 'rgba(255,255,255,0.98)';
+		this.color = '#fff';
 
 		this.x = x || 0.0;
 		this.y = y || 0.0;
@@ -47,13 +47,7 @@ Particle.prototype = {
 };
 
 
-const originalColors = [ '#69D2E7',
-	'#A7DBD8',
-	'#E0E4CC',
-	'#F38630',
-	'#FA6900',
-	'#FF4E50',
-	'#F9D423' ];
+const originalColors = [ '#69D2E7', '#A7DBD8', '#E0E4CC', '#F38630', '#FA6900', '#FF4E50', '#F9D423' ];
 
 let MAX_PARTICLES = 280;
 let COLOURS = [ '#69D2E7',
