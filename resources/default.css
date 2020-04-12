@@ -54,9 +54,8 @@ body > header {
 	position: sticky;
 	top: 0;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
 	padding-top: 0.5rem;
 	padding-bottom: 0.25rem;
 	margin-bottom: 1em;
@@ -65,26 +64,34 @@ body > header {
 	box-shadow: 0 0 0.5em 0.5em #FFF;
 }
 
-body > header > a {
-	width: 75%
+body > header > div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
-body > header > a > img {
+body > header > div > a {
+	flex: 1 1 auto;
+}
+
+body > header > div > a > img {
 	display: block;
 	width: 100%;
 }
 
-body > header > label {
+body > header > div > label {
+	flex: 0 0 auto;
 	display: inline-flex;
 	flex-direction: column;
 	justify-content: space-between;
 	width: calc(1.25 * 1em);
 	height: 1em;
+	margin-left: 1em;
 }
 
-body > header > label::after,
-body > header > label::before,
-body > header > label > span {
+body > header > div label::after,
+body > header > div > label::before,
+body > header > div > label > span {
 	content: '';
 	display: block;
 	flex: 0 0 auto;
@@ -95,16 +102,26 @@ body > header > label > span {
 	transition: all .2s ease-in-out;
 }
 
-body > input:checked ~ header > label::before {
+body > input:checked ~ header > div > label::before {
 	transform: translateY(200%) rotate(135deg);
 }
 
-body > input:checked ~ header > label::after {
+body > input:checked ~ header > div > label::after {
 	transform: translateY(-200%) rotate(-135deg);
 }
 
-body > input:checked ~ header > label > span {
+body > input:checked ~ header > div > label > span {
 	transform: scale(0);
+}
+
+body > header > nav {
+	display: none;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+body > input:checked ~ header > nav {
+	display: block;
 }
 
 body > main {

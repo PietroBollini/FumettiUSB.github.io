@@ -28,9 +28,16 @@
 
         <header>
 
-            <a href="/"><img alt="Fumetti USB" src="{{ '/resources/icons/header.jpg' }}"></a>
+            <div>
+                <a href="/"><img alt="Fumetti USB" src="{{ '/resources/icons/header.jpg' }}"></a>
+                <label for="toggle"><span></span></label>
+            </div>
 
-            <label for="toggle"><span></span></label>
+            <nav>
+                <a href="">Questo</a>
+                <a href="">Quello</a>
+                <a href="">L'altro</a>
+            </nav>
 
         </header>
 
@@ -38,13 +45,13 @@
 
             {% if page.url == "/" %}
 
-            <section>
+            <!--<section>
 
                 <span>{{ page.title }}</span>
 
                 {{ content }}
 
-            </section>
+            </section>-->
 
             {% for post in site.posts limit: 15 %}
 
