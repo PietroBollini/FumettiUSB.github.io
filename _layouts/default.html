@@ -19,6 +19,7 @@
         <link rel="shortcut icon" href="{{ '/resources/icons/icon-16x16.ico' }}"/>
         <link rel="shortcut icon" href="{{ '/resources/icons/icon-32x32.ico' }}"/>
 
+        <script type="text/javascript" src="{{ '/resources/default.js' }}"></script>
 
     </head>
 
@@ -26,54 +27,67 @@
 
         <input id="toggle" type="checkbox"> <!-- hidden menu toggle for mobile view -->
 
-        <header>
-            <a href="/"><img alt="Fumetti USB" src="{{ '/resources/icons/header.jpg' }}"></a>
-        </header>
+        <aside>
+
+            <header>
+                <a href="/" title="Fumetti USB"></a>
+                <!--<label for="toggle"><span></span></label>-->
+            </header>
+
+            <!--<nav>
+                <a href="">Questo</a>
+                <a href="">Quello</a>
+                <a href="">L'altro</a>
+            </nav>-->
+
+        </aside>
 
         <main>
 
-            {% if page.url == "/" %}
+            <article>
 
-            <!--<section>
+                {% if page.url == "/" %}
 
-                <span>{{ page.title }}</span>
+                <!--<section>
+
+                    <span>{{ page.title }}</span>
+
+                    {{ content }}
+
+                </section>-->
+
+                {% for post in site.posts limit: 15 %}
+
+                <section>
+
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+
+                    {% assign images = post.content | split: '<img'  %}
+                    {% assign preview = images[1] | split: 'src="' | last | split: '"' | first   %}
+
+                    <a href="{{ post.url }}"><img src="{{ preview }}"></img></a>
+
+                </section>
+
+                {% endfor %}
+
+                {% else %}
 
                 {{ content }}
 
-            </section>-->
+                {% endif %}
 
-            {% for post in site.posts limit: 15 %}
+            </article>
 
-            <section>
-
-                <a href="{{ post.url }}">{{ post.title }}</a>
-
-                {% assign images = post.content | split: '<img'  %}
-                {% assign preview = images[1] | split: 'src="' | last | split: '"' | first   %}
-
-                <a href="{{ post.url }}"><img src="{{ preview }}"></img></a>
-
-            </section>
-
-            {% endfor %}
-
-            {% else %}
-
-            {{ content }}
-
-            {% endif %}
+            <footer>
+                <a title="Edit on GitHub" target="_blank" style="color: inherit;"
+                        href="http://prose.io/#{{ site.github.repository_nwo }}/tree/master/_posts">©</a> {{ 'now' | date:
+                '%Y' }} Fumetti USB. Quest'opera è distribuita con Licenza <a target="_blank"
+                    href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it">Creative Commons
+                <span style="white-space: nowrap;">BY-NC-SA 4.0</span></a>
+            </footer>
 
         </main>
-
-        <footer>
-            <a title="Edit on GitHub" target="_blank" style="color: inherit;"
-                    href="http://prose.io/#{{ site.github.repository_nwo }}/tree/master/_posts">©</a> {{ 'now' | date:
-            '%Y' }} Fumetti USB. Quest'opera è distribuita con Licenza <a target="_blank"
-                href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it">Creative Commons
-            <span style="white-space: nowrap;">BY-NC-SA 4.0</span></a>
-        </footer>
-
-        <script type="text/javascript" src="{{ '/resources/default.js' }}"></script>
 
         <script type="text/javascript" src="{{ '/resources/sketch.min.js' }}"></script>
         <script type="text/javascript" src="{{ '/resources/cursor.js' }}"></script>

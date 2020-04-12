@@ -41,53 +41,103 @@ body > input {
 }
 
 body > * {
-	flex: 0 0 auto;
-	width: 100%;
-	max-width: 50rem;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
 	padding-left: 1rem;
 	padding-right: 1rem;
-	margin: 0 auto;
 	overflow: hidden;
 }
 
-body > header {
+body > aside {
+	flex: 0 0 auto;
 	position: sticky;
 	top: 0;
 	padding-top: 0.5rem;
-	padding-bottom: 0.25rem;
-	margin-bottom: 1em;
+	padding-bottom: 0.5rem;
 	font-size: 1.5rem;
 	background-color: inherit;
 	box-shadow: 0 0 0.5em 0.5em #FFF;
 }
 
-body > header > a > img {
+body > aside > header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+body > aside > header > a {
+	flex-grow: 1;
+	height: 2.5em;
+	background-image: url("icons/header.jpg");
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+
+body > aside > header > label {
+	flex: 0 0 auto;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: calc(1.25 * 1em);
+	height: 1em;
+	margin-left: 1em;
+}
+
+body > aside > header > label::after,
+body > aside > header > label::before,
+body > aside > header > label > span {
+	content: '';
 	display: block;
+	flex: 0 0 auto;
+	height: 0.2em;
 	width: 100%;
+	border-radius: 0.5em;
+	background-color: #000;
+	transition: all .2s ease-in-out;
 }
 
-body > header > label::before {
-	content: '\f0c9'; /* fa-bars */
+body > input:checked ~ aside > header > label::before {
+	transform: translateY(200%) rotate(135deg);
 }
 
-body > input:checked ~ header > label::before {
-	content: '\f00d'; /* fa-times */
+body > input:checked ~ aside > header > label::after {
+	transform: translateY(-200%) rotate(-135deg);
+}
+
+body > input:checked ~ aside > header > label > span {
+	transform: scale(0);
+}
+
+body > aside > nav {
+	display: none;
+	flex-grow: 1;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+body > input:checked ~ aside > nav {
+	display: block;
 }
 
 body > main {
+	flex: 1 1 auto;
+	padding-top: 1em;
+	padding-bottom: 0.75em;
+}
+
+body > main > * {
+	max-width: 50rem;
+}
+
+body > main > article {
 	flex-grow: 1;
-	padding-top: 0;
-	padding-bottom: 1rem;
 }
 
-body > main > div:first-child {
-	margin-bottom: 1.5em;
-	font-size: 150%;
-}
-
-body > footer {
-	padding-top: 0.75rem;
-	padding-bottom: 0.75rem;
+body > main > footer {
+	margin-top: 0.75rem;
 	font-size: 0.9rem;
 	color: #666;
 }
@@ -107,18 +157,18 @@ body > canvas {
 
 /**** Index ***********************************************************************************************************/
 
-body.index > main > section {
+body.index > main > article > section {
 	margin-bottom: 2.5em;
 	vertical-align: top;
 }
 
-body.index > main> section > *:first-child {
+body.index > main > article > section > *:first-child {
 	display: block;
 	font-size: 110%;
 	margin-bottom: 1em;
 }
 
-body.index > main> section > a > img {
+body.index > main > article > section > a > img {
 	width: 100%;
 }
 
@@ -326,27 +376,38 @@ select {
 
 /**** Large ***********************************************************************************************************/
 
-@media screen and (min-width: 480px), print {
+@media screen and (min-width: 640px), print {
 
 	body {
+		flex-direction: row;
+		height: 100%;
+		overflow: hidden;
 		text-align: left;
 	}
 
-	body.post > header > a > img {
-		transition: width 750ms;
+	body > * {
+		overflow-y: auto;
 	}
 
-	body.post.scrolled > header > a > img {
-		width: 30%;
+	body > aside {
+		width: 25%;
 	}
 
-	body.index > main > section {
+	body > aside > header > label {
+		display: none;
+	}
+
+	body > aside > nav {
+		display: block;
+	}
+
+	body.index > main > article > section {
 		display: inline-block;
 		width: 49%;
 		padding: 0.5em;
 	}
 
-	body.index > main> section > *:first-child {
+	body.index > main > article > section > *:first-child {
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -373,18 +434,19 @@ select {
 
 /**** Larger ******************************************************************************************************************/
 
-@media screen and (min-width: 640px), print {
+@media screen and (min-width: 960px), print {
 
-	body.index > main > section {
+	body.index > main > article > section {
 		width: 32%;
 		padding: 0.75em;
 	}
 
 }
 
-
 /**** Printed *********************************************************************************************************/
 
 @media print {
 
 }
+
+
