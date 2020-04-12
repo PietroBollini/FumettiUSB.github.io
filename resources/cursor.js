@@ -64,6 +64,7 @@ let pool = [];
 
 let demo = Sketch.create({
 	container: document.body,
+	eventTarget: document.body,
 	retina: 'auto'
 });
 
