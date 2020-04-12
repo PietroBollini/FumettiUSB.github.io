@@ -53,6 +53,10 @@ body > * {
 body > header {
 	position: sticky;
 	top: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 	padding-top: 0.5rem;
 	padding-bottom: 0.25rem;
 	margin-bottom: 1em;
@@ -61,17 +65,46 @@ body > header {
 	box-shadow: 0 0 0.5em 0.5em #FFF;
 }
 
+body > header > a {
+	width: 75%
+}
+
 body > header > a > img {
 	display: block;
 	width: 100%;
 }
 
-body > header > label::before {
-	content: '\f0c9'; /* fa-bars */
+body > header > label {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: calc(1.25 * 1em);
+	height: 1em;
+}
+
+body > header > label::after,
+body > header > label::before,
+body > header > label > span {
+	content: '';
+	display: block;
+	flex: 0 0 auto;
+	height: 0.2em;
+	width: 100%;
+	border-radius: 0.5em;
+	background-color: #000;
+	transition: all .2s ease-in-out;
 }
 
 body > input:checked ~ header > label::before {
-	content: '\f00d'; /* fa-times */
+	transform: translateY(200%) rotate(135deg);
+}
+
+body > input:checked ~ header > label::after {
+	transform: translateY(-200%) rotate(-135deg);
+}
+
+body > input:checked ~ header > label > span {
+	transform: scale(0);
 }
 
 body > main {
@@ -99,13 +132,13 @@ body.index > main > section {
 	vertical-align: top;
 }
 
-body.index > main> section > *:first-child {
+body.index > main > section > *:first-child {
 	display: block;
 	font-size: 110%;
 	margin-bottom: 1em;
 }
 
-body.index > main> section > a > img {
+body.index > main > section > a > img {
 	width: 100%;
 }
 
@@ -319,10 +352,6 @@ select {
 		text-align: left;
 	}
 
-	body.post > header > a > img {
-		transition: width 750ms;
-	}
-
 	body.post.scrolled > header > a > img {
 		width: 30%;
 	}
@@ -333,7 +362,7 @@ select {
 		padding: 0.5em;
 	}
 
-	body.index > main> section > *:first-child {
+	body.index > main > section > *:first-child {
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
