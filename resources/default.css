@@ -323,10 +323,6 @@ select {
 		transition: width 750ms;
 	}
 
-	body.post.scrolled > header > a > img {
-		width: 30%;
-	}
-
 	body.index > main > section {
 		display: inline-block;
 		width: 49%;
