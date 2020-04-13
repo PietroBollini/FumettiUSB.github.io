@@ -19,3 +19,14 @@ prose:
           element: "checkbox"
           label: "published"
           value: "true"
+      - name: "category"
+        field:
+          element: "select"
+          label: "category"
+          value: "comics"
+          options:
+            - name: 'Comics'
+              value: 'comics'
+            - name: 'Pictures'
+              value: 'pictures'
+
