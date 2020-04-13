@@ -1,6 +1,7 @@
 ---
 published: true
 title: L'avventura di Scott parte uno
+category: "comics"
 ---
 
 ![]({{site.baseurl}}/assets/scott1.jpeg)

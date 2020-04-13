@@ -1,6 +1,7 @@
 ---
 published: true
 title: I meschini dispositivi
+category: "comics"
 ---
 ## i meschini dispositivi
 
