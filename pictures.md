@@ -1,0 +1,4 @@
+---
+title: Immagini
+index: pictures
+---

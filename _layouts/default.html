@@ -21,7 +21,7 @@
 
     </head>
 
-    <body class="{% if page.url == '/' %}index{% else %}post{% endif %}">
+    <body class="{% if page.url == '/' or page.index %}index{% else %}post{% endif %}">
 
         <input id="toggle" type="checkbox"> <!-- hidden menu toggle for mobile view -->
 
@@ -29,14 +29,13 @@
 
             <header>
                 <a href="/" title="Fumetti USB"></a>
-                <!--<label for="toggle"><span></span></label>-->
+                <label for="toggle"><span></span></label>
             </header>
 
-            <!--<nav>
-                <a href="">Questo</a>
-                <a href="">Quello</a>
-                <a href="">L'altro</a>
-            </nav>-->
+            <nav>
+                <a href="/comics/">Fumetti</a>
+                <a href="/pictures/">Immagini</a>
+            </nav>
 
         </aside>
 
@@ -44,7 +43,7 @@
 
             <article>
 
-                {% if page.url == "/" %}
+                {% if page.url == '/' or page.index %}
 
                 <!--<section>
 
@@ -54,14 +53,16 @@
 
                 </section>-->
 
-                {% for post in site.posts limit: 15 %}
+                {% assign posts = site.categories[page.index] | default: site.posts %}
+
+                {% for post in posts limit: 15 %}
 
                 <section>
 
                     <a href="{{ post.url }}">{{ post.title }}</a>
 
-                    {% assign images = post.content | split: '<img'  %}
-                    {% assign preview = images[1] | split: 'src="' | last | split: '"' | first   %}
+                    {% assign images = post.content | split: '<img' %}
+                    {% assign preview = images[1] | split: 'src="' | last | split: '"' | first %}
 
                     <a href="{{ post.url }}"><img src="{{ preview }}"></img></a>
 
@@ -79,10 +80,10 @@
 
             <footer>
                 <a title="Edit on GitHub" target="_blank" style="color: inherit;"
-                        href="http://prose.io/#{{ site.github.repository_nwo }}/tree/master/_posts">©</a> {{ 'now' | date:
-                '%Y' }} Fumetti USB. Quest'opera è distribuita con Licenza <a target="_blank"
-                    href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it">Creative Commons
-                <span style="white-space: nowrap;">BY-NC-SA 4.0</span></a>
+                        href="http://prose.io/#{{ site.github.repository_nwo }}/tree/master/_posts">©</a>
+                    {{ 'now' | date: '%Y' }} Fumetti USB. Quest'opera è distribuita con Licenza <a target="_blank"
+                    href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it">Creative
+                Commons <span style="white-space: nowrap;">BY-NC-SA 4.0</span></a>
             </footer>
 
         </main>
@@ -90,7 +91,7 @@
         <script type="text/javascript" src="{{ '/resources/default.js' }}"></script>
 
         <script type="text/javascript" src="{{ '/resources/sketch.min.js' }}"></script>
-        <script type="text/javascript" src="{{ '/resources/cursor.js' }}"></script>
+        <!--        <script type="text/javascript" src="{{ '/resources/cursor.js' }}"></script>-->
 
     </body>
 

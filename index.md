@@ -1,5 +1,3 @@
 ---
 title: Fumetti USB
 ---
-
-.

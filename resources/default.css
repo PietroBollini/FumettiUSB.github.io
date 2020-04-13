@@ -1,185 +1,190 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 *, *::before, *::after {
-	flex: 0 0 auto;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	outline: none 1px #CCC;
-	border: none 1px #CCC;
-	font: inherit;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none 1px #CCC;
+    border: none 1px #CCC;
+    font: inherit;
 }
 
 /**** Fonts ***********************************************************************************************************/
 
 html {
-	font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 
 /**** Layout **********************************************************************************************************/
 
 html {
-	height: 100%;
-	width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
-	width: 100%;
-	min-height: 100%;
-	text-align: center;
-	font-size: 12pt;
-	color: #000;
-	background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    min-height: 100%;
+    text-align: center;
+    font-size: 12pt;
+    color: #000;
+    background-color: #FFF;
 }
 
 body > input {
-	display: none;
+    display: none;
 }
 
 body > * {
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow: hidden;
 }
 
 body > aside {
-	flex: 0 0 auto;
-	position: sticky;
-	top: 0;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
-	font-size: 1.5rem;
-	background-color: inherit;
-	box-shadow: 0 0 0.5em 0.5em #FFF;
+    flex: 0 0 auto;
+    position: sticky;
+    top: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+    background-color: inherit;
+    box-shadow: 0 0 0.5em 0.5em #FFF;
 }
 
 body > aside > header {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 body > aside > header > a {
-	flex-grow: 1;
-	height: 2.5em;
-	background-image: url("icons/header.jpg");
-	background-position: center center;
-	background-size: contain;
-	background-repeat: no-repeat;
+    flex-grow: 1;
+    height: 2.5em;
+    background-image: url("icons/header.jpg");
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 
 body > aside > header > label {
-	flex: 0 0 auto;
-	display: inline-flex;
-	flex-direction: column;
-	justify-content: space-between;
-	width: calc(1.25 * 1em);
-	height: 1em;
-	margin-left: 1em;
+    flex: 0 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(1.25 * 1em);
+    height: 1em;
+    margin-left: 1em;
 }
 
 body > aside > header > label::after,
 body > aside > header > label::before,
 body > aside > header > label > span {
-	content: '';
-	display: block;
-	flex: 0 0 auto;
-	height: 0.2em;
-	width: 100%;
-	border-radius: 0.5em;
-	background-color: #000;
-	transition: all .2s ease-in-out;
+    content: '';
+    display: block;
+    flex: 0 0 auto;
+    height: 0.2em;
+    width: 100%;
+    border-radius: 0.5em;
+    background-color: #000;
+    transition: all .2s ease-in-out;
 }
 
 body > input:checked ~ aside > header > label::before {
-	transform: translateY(200%) rotate(135deg);
+    transform: translateY(200%) rotate(135deg);
 }
 
 body > input:checked ~ aside > header > label::after {
-	transform: translateY(-200%) rotate(-135deg);
+    transform: translateY(-200%) rotate(-135deg);
 }
 
 body > input:checked ~ aside > header > label > span {
-	transform: scale(0);
+    transform: scale(0);
 }
 
 body > aside > nav {
-	display: none;
-	flex-grow: 1;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
+    display: none;
+    flex-grow: 1;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 body > input:checked ~ aside > nav {
-	display: block;
+    display: block;
 }
 
+body > aside > nav > * {
+    display: block;
+}
+
+
 body > main {
-	flex: 1 1 auto;
-	padding-top: 1em;
-	padding-bottom: 0.75em;
+    flex: 1 1 auto;
+    padding-top: 1em;
+    padding-bottom: 0.75em;
 }
 
 body > main > * {
-	max-width: 50rem;
+    max-width: 50rem;
 }
 
 body > main > article {
-	flex-grow: 1;
+    flex-grow: 1;
 }
 
 body > main > footer {
-	margin-top: 0.75rem;
-	font-size: 0.9rem;
-	color: #666;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: #666;
 }
 
 body > canvas {
-	 position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	padding: 0;
-	max-width: initial;
-	opacity: 0.75;
-	pointer-events: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    max-width: initial;
+    opacity: 0.75;
+    pointer-events: none;
 }
 
 body > script {
-	display: none;
+    display: none;
 }
 
 /**** Index ***********************************************************************************************************/
 
 body.index > main > article > section {
-	margin-bottom: 2.5em;
-	vertical-align: top;
+    margin-bottom: 2.5em;
+    vertical-align: top;
 }
 
 body.index > main > article > section > *:first-child {
-	display: block;
-	font-size: 110%;
-	margin-bottom: 1em;
+    display: block;
+    font-size: 110%;
+    margin-bottom: 1em;
 }
 
 body.index > main > article > section > a > img {
-	width: 100%;
+    width: 100%;
 }
 
 /**** Post ************************************************************************************************************/
 
 p > img[alt=''] {
-	display: block;
-	width: 100%;
+    display: block;
+    width: 100%;
 }
 
 /**** Typography ******************************************************************************************************/
@@ -187,11 +192,11 @@ p > img[alt=''] {
 h1,
 h2,
 h3 {
-	clear: both;
-	margin-top: 1em;
-	margin-bottom: 0.5em;
-	font-weight: 300;
-	color: #333;
+    clear: both;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: 300;
+    color: #333;
 }
 
 * + h1,
@@ -200,238 +205,238 @@ h3 {
 }
 
 h1 {
-	padding-bottom: 0.2em;
-	border-bottom-style: solid;
-	font-size: 175%;
+    padding-bottom: 0.2em;
+    border-bottom-style: solid;
+    font-size: 175%;
 }
 
 h2 {
-	padding-bottom: 0.2em;
-	border-bottom-style: dotted;
-	font-size: 125%;
+    padding-bottom: 0.2em;
+    border-bottom-style: dotted;
+    font-size: 125%;
 }
 
 h3 {
-	font-weight: 700;
-	font-size: 100%;
+    font-weight: 700;
+    font-size: 100%;
 }
 
 dl, ul, ol {
-	margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 ul, ol {
-	list-style-position: inside;
+    list-style-position: inside;
 }
 
 ul {
-	list-style-type: none;
+    list-style-type: none;
 }
 
 ul > li::before {
-	content: '›';
-	margin-right: 0.25em;
+    content: '›';
+    margin-right: 0.25em;
 }
 
 ol {
-	list-style-type: decimal;
+    list-style-type: decimal;
 }
 
 li {
-	margin-bottom: 0.1em;
+    margin-bottom: 0.1em;
 }
 
 dt {
-	font-weight: 700;
-	font-size: 95%;
-	color: #333;
+    font-weight: 700;
+    font-size: 95%;
+    color: #333;
 }
 
 * + dt {
-	margin-top: 1em;
+    margin-top: 1em;
 }
 
 dt * {
-	font-weight: 700;
+    font-weight: 700;
 }
 
 dd {
-	margin-top: 0.5em;
+    margin-top: 0.5em;
 }
 
 table {
-	width: 100%;
-	border-collapse: collapse;
-	margin-bottom: 1.5em;
-	font-size: 95%;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5em;
+    font-size: 95%;
 }
 
 tr:nth-child(odd) > td {
-	background-color: #F8F8F8;
+    background-color: #F8F8F8;
 }
 
 th,
 td {
-	padding: 0.5em 0.5em;
-	border-bottom-style: solid;
-	vertical-align: baseline;
+    padding: 0.5em 0.5em;
+    border-bottom-style: solid;
+    vertical-align: baseline;
 }
 
 th {
-	white-space: pre;
-	font-weight: 700;
+    white-space: pre;
+    font-weight: 700;
 }
 
 pre {
-	position: relative;
-	overflow: auto;
-	padding: 0.5em 0.75em;
-	border-style: dotted;
-	border-radius: 0.25em;
-	white-space: pre-wrap;
-	text-align: left;
-	tab-size: 4;
-	font-size: 85%;
-	background-color: #F0F0F0;
+    position: relative;
+    overflow: auto;
+    padding: 0.5em 0.75em;
+    border-style: dotted;
+    border-radius: 0.25em;
+    white-space: pre-wrap;
+    text-align: left;
+    tab-size: 4;
+    font-size: 85%;
+    background-color: #F0F0F0;
 }
 
 pre {
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 pre + pre,
 div + div > pre {
-	margin-top: -1em;
+    margin-top: -1em;
 }
 
 p {
-	margin-bottom: 0.75em;
+    margin-bottom: 0.75em;
 }
 
 blockquote {
-	margin-top: 1.5em;
-	padding-left: 2em;
-	padding-right: 0.5em;
-	margin-bottom: 1.5em;
-	border-left: solid 0.5em #EEE;
-	font-style: italic;
+    margin-top: 1.5em;
+    padding-left: 2em;
+    padding-right: 0.5em;
+    margin-bottom: 1.5em;
+    border-left: solid 0.5em #EEE;
+    font-style: italic;
 }
 
 blockquote > small:last-child {
-	display: block;
-	margin-top: 0.5em;
-	text-align: right;
+    display: block;
+    margin-top: 0.5em;
+    text-align: right;
 }
 
 hr {
-	margin-top: 1em;
-	margin-bottom: 1em;
-	border-top-style: solid;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-top-style: solid;
 }
 
 a, a:visited {
-	text-decoration: none;
-	font-weight: 700;
-	color: #567;
+    text-decoration: none;
+    font-weight: 700;
+    color: #567;
 }
 
 a:hover, button:active {
-	color: #C30 !important;
-	border-color: #C30 !important;
-	cursor: pointer;
+    color: #C30 !important;
+    border-color: #C30 !important;
+    cursor: pointer;
 }
 
 a.more:after {
-	content: '›››';
-	display: inline-block;
-	margin-left: 0.25em;
+    content: '›››';
+    display: inline-block;
+    margin-left: 0.25em;
 }
 
 button {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 em {
-	font-style: italic;
+    font-style: italic;
 }
 
 strong {
-	color: #333;
-	white-space: pre;
-	font-weight: 700;
+    color: #333;
+    white-space: pre;
+    font-weight: 700;
 }
 
 abbr {
-	text-transform: none;
-	white-space: pre;
+    text-transform: none;
+    white-space: pre;
 }
 
 code {
-	white-space: pre;
-	letter-spacing: -0.01em;
-	font-size: 90%;
+    white-space: pre;
+    letter-spacing: -0.01em;
+    font-size: 90%;
 }
 
 select {
-	border-style: solid;
+    border-style: solid;
 }
 
 /**** Large ***********************************************************************************************************/
 
 @media screen and (min-width: 640px), print {
 
-	body {
-		flex-direction: row;
-		height: 100%;
-		overflow: hidden;
-		text-align: left;
-	}
+    body {
+        flex-direction: row;
+        height: 100%;
+        overflow: hidden;
+        text-align: left;
+    }
 
-	body > * {
-		overflow-y: auto;
-	}
+    body > * {
+        overflow-y: auto;
+    }
 
-	body > aside {
-		width: 25%;
-	}
+    body > aside {
+        width: 25%;
+    }
 
-	body > aside > header > label {
-		display: none;
-	}
+    body > aside > header > label {
+        display: none;
+    }
 
-	body > aside > nav {
-		display: block;
-	}
+    body > aside > nav {
+        display: block;
+    }
 
-	body.index > main > article > section {
-		display: inline-block;
-		width: 49%;
-		padding: 0.5em;
-	}
+    body.index > main > article > section {
+        display: inline-block;
+        width: 49%;
+        padding: 0.5em;
+    }
 
-	body.index > main > article > section > *:first-child {
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
+    body.index > main > article > section > *:first-child {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
-	ul, ol {
-		list-style-position: outside;
-		padding-left: 1.25em;
-	}
+    ul, ol {
+        list-style-position: outside;
+        padding-left: 1.25em;
+    }
 
-	ul {
-		list-style-type: square;
-	}
+    ul {
+        list-style-type: square;
+    }
 
-	ul > li::before {
-		display: none;
-	}
+    ul > li::before {
+        display: none;
+    }
 
-	dd {
-		margin-left: 1em;
-	}
+    dd {
+        margin-left: 1em;
+    }
 
 }
 
@@ -439,10 +444,10 @@ select {
 
 @media screen and (min-width: 960px), print {
 
-	body.index > main > article > section {
-		width: 32%;
-		padding: 0.75em;
-	}
+    body.index > main > article > section {
+        width: 32%;
+        padding: 0.75em;
+    }
 
 }
 
