@@ -414,7 +414,7 @@ select {
     }
 
     body > aside {
-        width: 25%;
+        width: 33%;
     }
 
     body > aside > header {
@@ -463,6 +463,10 @@ select {
 /**** Larger ******************************************************************************************************************/
 
 @media screen and (min-width: 960px), print {
+
+    body > aside {
+        width: 25%;
+    }
 
     body.index > main > article > section {
         width: 32%;
