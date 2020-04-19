@@ -4,12 +4,12 @@ title: L'avventura di Scott parte uno
 category: "comics"
 ---
 
-![]({{site.baseurl}}/assets/scott1.jpeg)
-![]({{site.baseurl}}/assets/scott2.jpeg)
-![]({{site.baseurl}}/assets/scott3.jpeg)
-![]({{site.baseurl}}/assets/scott4.jpeg)
-![]({{site.baseurl}}/assets/scott5.jpeg)
-![]({{site.baseurl}}/assets/scott6.jpeg)
-![]({{site.baseurl}}/assets/scott7.jpeg)
-![]({{site.baseurl}}/assets/scott8.jpeg)
-![]({{site.baseurl}}/assets/scott9.jpeg)
+![]({{site.baseurl}}/assets/2020-04-08-l-avventura-di-scott-parte-uno-1.png)
+![]({{site.baseurl}}/assets/2020-04-08-l-avventura-di-scott-parte-uno-2.png)
+![]({{site.baseurl}}/assets/2020-04-08-l-avventura-di-scott-parte-uno-3.png)
+![]({{site.baseurl}}/assets/2020-04-08-l-avventura-di-scott-parte-uno-4.png)
+![]({{site.baseurl}}/assets/2020-04-08-l-avventura-di-scott-parte-uno-5.png)
+![]({{site.baseurl}}/assets/2020-04-08-l-avventura-di-scott-parte-uno-6.png)
+![]({{site.baseurl}}/assets/2020-04-08-l-avventura-di-scott-parte-uno-7.png)
+![]({{site.baseurl}}/assets/2020-04-08-l-avventura-di-scott-parte-uno-8.png)
+![]({{site.baseurl}}/assets/2020-04-08-l-avventura-di-scott-parte-uno-9.png)

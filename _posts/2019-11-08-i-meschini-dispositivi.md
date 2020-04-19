@@ -5,6 +5,6 @@ category: "comics"
 ---
 ## i meschini dispositivi
 
-![]({{site.baseurl}}/assets/tecnologia%201.jpg)
-![]({{site.baseurl}}/assets/tecnologia%202.jpg)
-![]({{site.baseurl}}/assets/tecnologia%203.jpg)
+![]({{site.baseurl}}/assets/2019-11-08-i-meschini-dispositivi-digitali-1.png)
+![]({{site.baseurl}}/assets/2019-11-08-i-meschini-dispositivi-digitali-2.png)
+![]({{site.baseurl}}/assets/2019-11-08-i-meschini-dispositivi-digitali-3.png)

@@ -3,5 +3,5 @@ published: true
 title: 'Una storia (quasi) vera '
 category: "comics"
 ---
-![]({{site.baseurl}}/assets/liguria%20coronavirus%201.jpeg)
-![]({{site.baseurl}}/assets/liguria%20coronavirus%202.jpeg)
+![]({{site.baseurl}}/assets/2020-03-08-una-storia-quasi-vera-1.png)
+![]({{site.baseurl}}/assets/2020-03-08-una-storia-quasi-vera-2.png)

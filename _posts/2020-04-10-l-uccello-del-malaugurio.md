@@ -1,9 +1,9 @@
 ---
 published: true
-title: l'uccello del malaugurio
+title: L'uccello del malaugurio
 category: "comics"
 ---
-![]({{site.baseurl}}/assets/uccello1.jpeg)
-![]({{site.baseurl}}/assets/uccello2.jpeg)
-![]({{site.baseurl}}/assets/uccello3.jpeg)
+![]({{site.baseurl}}/assets/2020-04-10-l-uccello-del-malaugurio-1.png)
+![]({{site.baseurl}}/assets/2020-04-10-l-uccello-del-malaugurio-2.png)
+![]({{site.baseurl}}/assets/2020-04-10-l-uccello-del-malaugurio-3.png)
 

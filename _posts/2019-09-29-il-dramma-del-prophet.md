@@ -1,8 +1,8 @@
 ---
 published: true
-title: il DRAMMA del PROPHET
+title: Il DRAMMA del PROPHET
 category: "comics"
 ---
-![]({{site.baseurl}}/assets/il%20PROPHET1.jpg)
-![]({{site.baseurl}}/assets/il%20PROPHET2.jpg)
-![]({{site.baseurl}}/assets/il%20PROPHET3.jpg)
+![]({{site.baseurl}}/assets/2019-09-29-il-dramma-del-prophet-1.png)
+![]({{site.baseurl}}/assets/2019-09-29-il-dramma-del-prophet-2.png)
+![]({{site.baseurl}}/assets/2019-09-29-il-dramma-del-prophet-3.png)

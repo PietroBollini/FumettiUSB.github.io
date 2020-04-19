@@ -3,5 +3,4 @@ title:  "Il mio compleanno"
 category: "comics"
 ---
 
-![]({{site.baseurl}}/assets/il-mio-compleanno.jpg)
-
+![]({{site.baseurl}}/assets/2019-09-28-il-mio-compleanno.png)
