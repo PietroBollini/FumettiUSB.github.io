@@ -113,6 +113,8 @@ body > aside > nav > a[href='/things/'] {
 }
 
 body > aside > nav > a[href='/about/'] {
+    margin-top: 0.5em;
+    padding-top: 15%; /* force aspect ratio */
     background-image: url("menu/about.png");
 }
 
