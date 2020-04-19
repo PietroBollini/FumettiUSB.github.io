@@ -9,6 +9,7 @@
 
         <title>{% if page.title %}{{ page.title }} | {% endif %}{{ project }}</title>
 
+        <meta name="keywords" content="Fumetti USB, fumetti">
         <meta name="description" content="{{ page.excerpt | strip_html }}">
 
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -60,7 +61,7 @@
 
                 <section>
 
-                    <a href="{{ post.url }}">{{ post.date | date: "'%y.%m.%d"}} / {{ post.title }}</a>
+                    <a href="{{ post.url }}">{{ post.date | date: "%Y.%m.%d"}}<br>{{ post.title }}</a>
 
                     {% assign images = post.content | split: '<img' %}
                     {% assign preview = images[1] | split: 'src="' | last | split: '"' | first %}
