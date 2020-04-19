@@ -1,4 +1,4 @@
-- non lasciare margine negli scan che fai, le pagine non devono avere margine
+- non lasciare margine negli scan, le pagine non devono avere margine
 - devono essere esportate un  pagina per una, in formato 'jpg' a bassa qualità (massimo 500k)
 - non lasciare spazi nei nomi dei file
 - in caso di malfunzionamenti del sistema chidere al personale specializzato… (fra o Papa)
