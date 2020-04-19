@@ -60,25 +60,24 @@ body > aside {
     box-shadow: 0 0 0.5em 0.5em #FFF;
 }
 
+body > aside > * > a {
+    flex-grow: 1;
+    height: 0;
+    padding-top: 20%; /* force aspect ratio */
+    margin: 0 auto;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 body > aside > header {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-body > aside > * > a {
-   flex-grow: 1;
-    background-position: left center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-body > aside > * > a { /* force aspect ratio */
-    height: 0;
-    padding-top: 25%;
-}
-
 body > aside > header > a {
+    padding-top: 25%; /* force aspect ratio */
     background-image: url("menu/header.png");
 }
 
