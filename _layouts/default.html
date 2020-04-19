@@ -34,9 +34,17 @@
             </header>
 
             <nav>
-                <a href="/comics/" title="Fumetti"></a>
-                <a href="/things/" title="Non-Fumetti"></a>
-                <a href="/about/" title="Spiegazioni"></a>
+                {% for section in site.sections %}
+
+                {% if page.url == section.url %}
+                {% assign active = 'active' %}
+                {% else %}
+                {% assign active = nil %}
+                {% endif %}
+
+                <a class="{{ active }}" href="{{ section.url }}" title="{{ section.text }}"></a>
+
+                {% endfor %}
             </nav>
 
         </aside>

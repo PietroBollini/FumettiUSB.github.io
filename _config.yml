@@ -5,6 +5,14 @@ exclude: [Gemfile, Gemfile.lock]
 plugins:
   - jekyll-redirect-from
 
+sections:
+  - text: Fumetti
+    url: /comics/
+  - text: Non-Fumetti
+    url: /things/
+  - text: Spiegazioni
+    url: /about/
+
 prose:
   rooturl: "_posts"
   media: "assets"
