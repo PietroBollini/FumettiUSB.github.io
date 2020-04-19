@@ -51,6 +51,7 @@ body > * {
 
 body > aside {
     flex: 0 0 auto;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     padding-top: 0.5rem;
@@ -102,6 +103,10 @@ body > aside > header > label > span {
     border-radius: 0.5em;
     background-color: #000;
     transition: all .2s ease-in-out;
+}
+
+body > aside > nav > a.selected {
+    filter: drop-shadow(0 0 0.25em red);
 }
 
 body > aside > nav > a[href='/comics/'] {
