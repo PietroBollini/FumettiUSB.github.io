@@ -27,6 +27,6 @@ prose:
           options:
             - name: 'Comics'
               value: 'comics'
-            - name: 'Pictures'
-              value: 'pictures'
+            - name: 'Things'
+              value: 'things'
 

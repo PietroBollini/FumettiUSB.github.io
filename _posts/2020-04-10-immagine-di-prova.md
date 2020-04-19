@@ -1,7 +1,7 @@
 ---
 published: true
 title: l'uccello del malaugurio
-category: "pictures"
+category: "things"
 ---
 ![]({{site.baseurl}}/assets/uccello1.jpeg)
 ![]({{site.baseurl}}/assets/uccello2.jpeg)

@@ -66,15 +66,21 @@ body > aside > header {
     align-items: center;
 }
 
-body > aside > header > a {
-    flex-grow: 1;
-    height: 2.5em;
-    background-image: url("icons/header.jpg");
+body > aside > * > a {
+   flex-grow: 1;
     background-position: left center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
+body > aside > * > a { /* force aspect ratio */
+    height: 0;
+    padding-top: 25%;
+}
+
+body > aside > header > a {
+    background-image: url("menu/header.png");
+}
 
 body > aside > header > label {
     flex: 0 0 auto;
@@ -97,6 +103,18 @@ body > aside > header > label > span {
     border-radius: 0.5em;
     background-color: #000;
     transition: all .2s ease-in-out;
+}
+
+body > aside > nav > a[href='/comics/'] {
+    background-image: url("menu/comics.png");
+}
+
+body > aside > nav > a[href='/things/'] {
+    background-image: url("menu/things.png");
+}
+
+body > aside > nav > a[href='/about/'] {
+    background-image: url("menu/about.png");
 }
 
 body > input:checked ~ aside > header > label::before {
@@ -125,7 +143,6 @@ body > input:checked ~ aside > nav {
 body > aside > nav > * {
     display: block;
 }
-
 
 body > main {
     flex: 1 1 auto;
@@ -399,6 +416,10 @@ select {
 
     body > aside {
         width: 25%;
+    }
+
+    body > aside > header {
+        margin-bottom: 1em;
     }
 
     body > aside > header > label {
