@@ -60,7 +60,7 @@
 
                 <section>
 
-                    <a href="{{ post.url }}">{{ post.title }}</a>
+                    <a href="{{ post.url }}">{{ post.date | date: "'%y.%m.%d"}} / {{ post.title }}</a>
 
                     {% assign images = post.content | split: '<img' %}
                     {% assign preview = images[1] | split: 'src="' | last | split: '"' | first %}
