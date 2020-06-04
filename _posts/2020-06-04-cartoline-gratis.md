@@ -7,6 +7,7 @@ ci sono le cartoline tema Birdman e Fight Club!! perfette come regali o arredame
 Stampate a mano in serigrafia. 
 
 Per informazioni e ordini scivete in DM su instagram alla pagina @fumetti.usb oppure alla mail fumettini.sperimentali@gmail.com 
+
 Per le consegna in provincia di pavia c'è il corriere in bici!!
 ![]({{site.baseurl}}/assets/IMG_8127%202.jpg)
 
